@@ -1,0 +1,85 @@
+\documentclass[10pt]{article}
+
+\usepackage{xr}
+\input{../common/preamble}
+
+\externaldocument{../supplementary/supplementary}
+\newcommand{\suppref}[1]{\hyperref[#1]{Supplementary \autoref*{#1}}}
+\renewcommand{\subsectionautorefname}{Text}
+
+\title{\textbf{Title}}
+\thanks{$\sharp$ These authors contributed equally to this work.}
+\thanks{$\ast$ Corresponding author. E-mail: jundecno@gmail.com (Z. Zhang).}
+
+\author[1,$\sharp$,$\ast$]{Zhijun Zhang}
+\affil[1]{\small School of Computer Science and Technology, Soochow University, Suzhou 215006, China}
+% \affil[2]{\small Collaborative Innovation Center of Novel Software Technology and Industrialization, Nanjing 210000, China}
+\date{}
+
+\begin{document}
+\setstretch{1.5}
+\maketitle
+
+\begin{abstract}
+Write a concise summary of the research question, methods, principal findings, and significance.
+\end{abstract}
+
+\linenumbers
+
+\section{Introduction}
+
+Introduce the research background, identify the open problem, and summarize the main contribution \cite{greenwade93}.
+
+\section{Results}
+
+Present the core findings in a logical order. Refer to figures with Figure~\ref{fig:overview} and supplementary material with \suppref{fig:supp-overview}.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.35\linewidth]{figure.jpg}
+  \caption{Example figure caption. Replace this image and describe the main message of the figure.}
+  \label{fig:overview}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Example table caption.}
+  \label{tab:summary}
+  \begin{tabular}{lr}
+    \toprule
+    Item & Quantity \\
+    \midrule
+    Widgets & 42 \\
+    Gadgets & 13 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Discussion}
+
+Interpret the findings, compare them with previous work, and describe limitations or future directions.
+
+\section{Methods}
+
+Describe the experimental design, data sources, preprocessing, statistical analyses, and reproducibility details.
+
+\section*{Data and Code Availability}
+
+State where readers can access the data, code, and materials required to reproduce the work.
+
+\section*{Acknowledgements}
+
+Add funding sources, institutional support, and non-author contributions.
+
+\section*{Author Contributions}
+
+Describe each author's contribution using the journal's preferred taxonomy when available.
+
+\section*{Competing Interests}
+
+The authors declare no competing interests.
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}

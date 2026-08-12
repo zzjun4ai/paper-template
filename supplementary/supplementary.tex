@@ -1,0 +1,62 @@
+\documentclass[10pt]{article}
+
+\input{../common/preamble}
+
+\title{\textbf{Supplementary Information}}
+\author[1]{Zhijun Zhang}
+\affil[1]{\small School of Computer Science and Technology, Soochow University, Suzhou 215006, China}
+\date{}
+
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\tableautorefname}{Table}
+\renewcommand{\figureautorefname}{Figure}
+\renewcommand{\equationautorefname}{Equation}
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\thealgorithm}{S\arabic{algorithm}}
+\titleformat{\subsection}{\normalfont\bfseries}{Supplementary Note \arabic{subsection}}{0.5em}{}
+
+\hypersetup{
+  pdftitle={Supplementary Information}
+}
+
+\begin{document}
+\setstretch{1.5}
+\maketitle
+
+\section{Supplementary Figures}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.35\textwidth]{figure.jpg}
+  \caption{Example supplementary figure caption.}
+  \label{fig:supp-overview}
+\end{figure}
+
+\section{Supplementary Tables}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Example supplementary table caption.}
+  \label{tab:supp-summary}
+  \begin{tabular}{lr}
+    \toprule
+    Item & Quantity \\
+    \midrule
+    Widgets & 42 \\
+    Gadgets & 13 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Supplementary Notes}
+
+Use the supplementary file for extended methods, additional validation, and note-specific figures or tables that support the main text \cite{hirotaStepwiseChromatinRemodelling2008}.
+
+\subsection{Example Supplementary Note Title}
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}

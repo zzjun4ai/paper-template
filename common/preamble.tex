@@ -1,0 +1,73 @@
+% Shared settings for the manuscript and supplementary files.
+% Compile each entry file from its own directory.
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{xcolor}
+
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{xltabular}
+\usepackage{threeparttable}
+\usepackage{adjustbox}
+\usepackage{rotating}
+
+\usepackage{caption}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{setspace}
+\usepackage{titlesec}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{authblk}
+\usepackage{abstract}
+\usepackage[square,numbers,sort&compress]{natbib}
+
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+
+\IfFileExists{lineno.sty}{
+  \usepackage{lineno}
+  \renewcommand\linenumberfont{\normalfont\normalsize}
+}{
+  \newcommand{\linenumbers}{}
+}
+
+\renewcommand\arraystretch{1.2}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\graphicspath{{figures/}}
+
+\captionsetup{
+  font=normalsize,
+  labelfont=bf,
+  justification=justified,
+  singlelinecheck=false,
+  skip=5pt
+}
+\captionsetup[figure]{name={Figure},labelsep=period}
+\captionsetup[table]{name={Table},labelsep=period}
+
+\hypersetup{
+  pdfpagemode=UseOutlines,
+  linktocpage=true,
+  pdfauthor={Zhijun Zhang}
+}
+
+\renewcommand{\abstractnamefont}{\normalfont\Large\bfseries}
+\renewcommand{\captionfont}{\small\setstretch{1.2}}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+\makeatletter
+\def\thanks#1{\protected@xdef\@thanks{\@thanks
+        \protect\footnotetext{#1}}}
+\makeatother
