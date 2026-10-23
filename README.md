@@ -14,14 +14,16 @@ This repository contains a small LaTeX paper template with separate entry files 
 
 ## Compile
 
+Use a LaTeX distribution such as TeX Live or MiKTeX with `latexmk`, pdfLaTeX, and BibTeX available. Install the packages loaded by `common/preamble.tex`, including `xltabular`, before compiling. With MiKTeX, enable automatic installation of missing packages or install them through MiKTeX Console; with TeX Live, install missing packages through `tlmgr`.
+
 Compile from each entry file's directory so that relative paths resolve correctly.
 
 ```powershell
-cd manuscript
-latexmk -pdf manuscript.tex
-
-cd ../supplementary
+cd supplementary
 latexmk -pdf supplementary.tex
+
+cd ../manuscript
+latexmk -pdf manuscript.tex
 ```
 
 For cross-references from the manuscript to the supplement, compile the supplementary file first, then compile the manuscript.
